@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tienda Solidaria – Selectores CSS</title>
+<!-- Hoja de estilos externa para practicar selectores -->
+    <link rel="stylesheet" href="css/selectores2.css">
+</head>
+
+<body>
+<!-- HEADER semántico con navegación principal -->
+    <header class="site-header" id="top">
+        <nav class="menu" aria-label="principal">
+            <ul>
+                <li><a href="#home" class="is-active">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#donar" data-role="vip">Donar</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+<!-- MAIN contenedor del contenido principal -->
+    <main id="home">
+<!-- SECTION de productos en formato de grilla -->
+        <section id="productos" class="grid">
+<!-- ARTICLE tarjeta destacada con atributos de datos -->
+            <article class="card destacado" data-stock="bajo">
+                <h2 class="card__title">Mate</h2>
+                <p class="card__desc">Calabaza artesanal</p>
+                <a class="btn comprar" href="#comprar">Comprar</a>
+            </article>
+
+            <article class="card" data-stock="alto" data-oferta>
+                <h2 class="card__title">Yerba</h2>
+                <p class="card__desc">Orgánica</p>
+                <a class="btn comprar" href="#comprar">Comprar</a>
+            </article>
+        </section>
+
+
+<!-- ASIDE con información complementaria; aria-live para anuncios -->
+    <aside class="promo" aria-live="polite">
+        <p>Usá el cupón <strong>SOLIDARIO</strong></p>
+    </aside>
+
+
+<!-- FORM de donaciones con estados útiles para pseudo-clases -->
+    <section id="donar">
+        <h2>Donar</h2>
+        <form class="form-donar">
+            <label>Monto <input type="number" name="monto" required></label>
+            <label>Email <input type="email" name="email"></label>
+            <label>
+             <input type="checkbox" name="anonimo"> Donación anónima
+            </label>
+            <button class="btn" type="submit">Enviar</button>
+        </form>
+    </section>
+
+
+<!-- CONTACTO con enlaces a redes para practicar selectores de clase -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <ul class="redes">
+            <li><a href="https://wa.me/..." class="wa">WhatsApp</a></li>
+            <li><a href="https://instagram.com/..." class="ig">Instagram</a></li>
+            <li><a href="mailto:info@tienda.org" class="mail">Email</a></li>
+        </ul>
+    </section>
+</main>
+
+
+<!-- FOOTER con enlace a tope para practicar :hover / :focus-visible -->
+    <footer class="site-footer">
+        <a href="#top" class="to-top">Volver arriba</a>
+        <p>&copy; 2025 Tienda Solidaria</p>
+    </footer>
+</body>
+</html>
